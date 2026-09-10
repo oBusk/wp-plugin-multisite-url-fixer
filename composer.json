@@ -1,14 +1,13 @@
 {
-  "name": "roots/multisite-url-fixer",
+  "name": "obusk/multisite-url-fixer",
   "type": "wordpress-muplugin",
   "license": "MIT",
   "description":
-    "Fixes WordPress issues with home and site URL on multisite when using Bedrock",
-  "homepage": "https://roots.io/bedrock/",
-  "keywords": ["wordpress"],
+    "Fork of roots/multisite-url-fixer with domain-mapped multisite support",
+  "homepage": "https://github.com/oBusk/multisite-url-fixer",
+  "keywords": ["wordpress", "bedrock", "multisite", "domain-mapping"],
   "support": {
-    "issues": "https://github.com/roots/multisite-url-fixer/issues",
-    "forum": "https://discourse.roots.io/"
+    "issues": "https://github.com/oBusk/multisite-url-fixer/issues"
   },
   "autoload": {
     "psr-4": {

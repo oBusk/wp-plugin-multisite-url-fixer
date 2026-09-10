@@ -1,17 +1,41 @@
 # Multisite URL Fixer
 
-[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
+Fork of [`roots/multisite-url-fixer`](https://github.com/roots/multisite-url-fixer) with support for domain-mapped sites in subdirectory multisite installs.
 
-This repository is no longer maintained.
+## What this fixes
 
-If you would like to become the owner of this repository, or if you would like to be given write access, then [please reach out to us](https://twitter.com/rootswp).
+The original plugin appends `/wp` to `siteurl` only for `is_main_site() || is_subdomain_install()`. This means domain-mapped sites in a subdirectory multisite install don't get `/wp`, breaking `wp-login.php`, wp-admin CSS/JS, and other core assets.
 
-[Potential useful forks](https://useful-forks.github.io/?repo=roots%2Fmultisite-url-fixer)
+This fork adds a check comparing the current site's domain against the network's domain. When they differ (domain-mapped site), `/wp` is appended regardless of install mode.
 
-* * *
+## Installation
 
-A WordPress plugin to fix admin links due to the Bedrock url changes. See [this issue](https://github.com/roots/bedrock/issues/250) for more background.
+Add the repository to your `composer.json`:
 
-_Note: This plugin does not affect the paths for other stylesheets or plugins, just the URLs for sites using Bedrock. Specifically, it fixes broken links by ensuring that /wp/ is in the URL. (This is needed for admin panel links because Bedrock installs WordPress in a subfolder.)_
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/oBusk/multisite-url-fixer"
+    }
+  ]
+}
+```
 
-Many thanks to [@felixarntz](https://github.com/felixarntz) for the original code!
+Then require the package (this replaces `roots/multisite-url-fixer`):
+
+```sh
+composer require obusk/multisite-url-fixer
+```
+
+If you're replacing the original, remove it first:
+
+```sh
+composer remove roots/multisite-url-fixer
+composer require obusk/multisite-url-fixer
+```
+
+## Upstream
+
+The fix has been submitted as [roots/multisite-url-fixer#14](https://github.com/roots/multisite-url-fixer/pull/14).
