@@ -4,7 +4,7 @@
  * Plugin Name: Multisite URL Fixer
  * Plugin URI: https://github.com/oBusk/wp-plugin-multisite-url-fixer
  * Description: Fork of roots/multisite-url-fixer with domain-mapped multisite support
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: Oscar Busk
  * Author URI: https://github.com/oBusk
  * License: MIT License
