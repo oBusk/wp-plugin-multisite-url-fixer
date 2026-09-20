@@ -17,7 +17,7 @@ Add the repository to your `composer.json`:
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/oBusk/multisite-url-fixer"
+      "url": "https://github.com/oBusk/wp-plugin-multisite-url-fixer"
     }
   ]
 }
@@ -26,14 +26,14 @@ Add the repository to your `composer.json`:
 Then require the package (this replaces `roots/multisite-url-fixer`):
 
 ```sh
-composer require obusk/multisite-url-fixer
+composer require obusk/wp-plugin-multisite-url-fixer
 ```
 
 If you're replacing the original, remove it first:
 
 ```sh
 composer remove roots/multisite-url-fixer
-composer require obusk/multisite-url-fixer
+composer require obusk/wp-plugin-multisite-url-fixer
 ```
 
 ## Upstream

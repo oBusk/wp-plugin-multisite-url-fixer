@@ -1,13 +1,13 @@
 {
-  "name": "obusk/multisite-url-fixer",
+  "name": "obusk/wp-plugin-multisite-url-fixer",
   "type": "wordpress-muplugin",
   "license": "MIT",
   "description":
     "Fork of roots/multisite-url-fixer with domain-mapped multisite support",
-  "homepage": "https://github.com/oBusk/multisite-url-fixer",
+  "homepage": "https://github.com/oBusk/wp-plugin-multisite-url-fixer",
   "keywords": ["wordpress", "bedrock", "multisite", "domain-mapping"],
   "support": {
-    "issues": "https://github.com/oBusk/multisite-url-fixer/issues"
+    "issues": "https://github.com/oBusk/wp-plugin-multisite-url-fixer/issues"
   },
   "autoload": {
     "psr-4": {
